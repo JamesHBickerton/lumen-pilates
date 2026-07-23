@@ -1536,6 +1536,10 @@ p {
      Navigation
   ========================= */
 
+  header {
+    height: 0;
+  }
+
   .navbar {
     padding: 0.1rem 1.5rem;
   }
