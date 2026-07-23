@@ -1,0 +1,2074 @@
+/* =========================
+   Global Reset
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #503723;
+}
+
+header {
+  height: 5rem;
+}
+
+/* =========================
+   Variables
+========================= */
+
+:root {
+  --cream: #faf7f3;
+  --light-cream: #f8f4ee;
+  --beige: #f0e5da;
+
+  --brown: #af6e43;
+  --dark-brown: #7b4d2f;
+  --soft-brown: #bf8b69;
+
+  --text: #6f675f;
+  --dark-text: #503723;
+
+  --white: #ffffff;
+
+  --shadow: 0 12px 30px rgba(80, 55, 35, 0.08);
+}
+
+/* =========================
+   Typography
+========================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.8;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.btn {
+  display: inline-block;
+
+  padding: 1rem 2.5rem;
+
+  background-color: var(--brown);
+
+  color: var(--cream);
+
+  text-decoration: none;
+
+  border-radius: 50px;
+
+  font-weight: 300;
+
+  text-transform: uppercase;
+
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--dark-brown);
+  color: var(--cream);
+}
+
+/* =========================
+   Navigation
+========================= */
+
+.navbar {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background-color: var(--cream);
+
+  padding: 0.1rem 3.75rem;
+
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.fixed {
+  position: fixed;
+
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-trigger {
+  height: 1px;
+
+  position: absolute;
+
+  top: 80px;
+
+  width: 100%;
+}
+
+/* =========================
+   Hamburger Menu
+========================= */
+
+.hamburger {
+  display: none;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+
+  width: 26px;
+  height: 2px;
+
+  background-color: #af6e43;
+
+  margin: 6px 0;
+
+  transition: 0.3s ease;
+}
+
+/* Logo */
+
+.logo img {
+  width: 20rem;
+
+  height: auto;
+
+  display: block;
+}
+
+/* Centre Navigation */
+
+.nav-centre {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+
+  list-style: none;
+
+  gap: 4rem;
+}
+
+.nav-contact {
+  display: flex;
+
+  list-style: none;
+
+  margin-right: 2.8rem;
+}
+
+.mobile-contact {
+  display: none;
+}
+
+.nav-links a,
+.nav-contact a {
+  text-decoration: none;
+
+  color: var(--brown);
+
+  font-size: 0.9rem;
+
+  font-weight: 300;
+
+  letter-spacing: 0.08em;
+
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-contact a:hover {
+  color: #cba37e;
+}
+
+/* =========================
+   Homepage Hero
+========================= */
+
+.hero {
+  height: 100vh;
+
+  min-height: 700px;
+
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.25),
+      rgba(34, 34, 34, 0.25)
+    ),
+    url("images/hero-image.webp");
+
+  background-size: cover;
+
+  background-position: center 30%;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--cream);
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 1;
+
+  text-align: center;
+
+  max-width: 45rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+
+  line-height: 1.6;
+
+  margin-bottom: 2.5rem;
+}
+
+/* =========================
+   Services Section
+========================= */
+
+.services {
+  padding: 6rem 5rem;
+
+  background-color: var(--light-cream);
+}
+
+.services-header {
+  text-align: center;
+
+  max-width: 40rem;
+
+  margin: 0 auto 4rem;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+
+  color: var(--brown);
+
+  margin-bottom: 1rem;
+}
+
+.services-header p {
+  font-size: 1.1rem;
+
+  font-weight: 300;
+
+  color: #555;
+}
+
+/* Carousel Layout */
+
+.services-carousel {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+.service-slide {
+  max-width: 70rem;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 1fr;
+
+  align-items: center;
+
+  gap: 4rem;
+}
+
+/* Image */
+
+.service-image img {
+  width: 100%;
+
+  height: 24rem;
+
+  object-fit: cover;
+
+  display: block;
+
+  box-shadow: var(--shadow);
+}
+
+/* Content */
+
+.service-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.25rem;
+
+  min-height: 18rem;
+}
+
+.service-number {
+  font-size: 0.85rem;
+
+  letter-spacing: 0.15em;
+
+  color: var(--brown);
+}
+
+.service-content h3 {
+  font-size: 2.2rem;
+
+  letter-spacing: 0.2rem;
+
+  color: var(--brown);
+}
+
+.service-content p {
+  max-width: 30rem;
+
+  font-size: 1.1rem;
+
+  font-weight: 300;
+
+  color: #555;
+}
+
+/* Learn More */
+
+.learn-more {
+  margin-top: 1rem;
+
+  color: var(--brown);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #cba37e;
+}
+
+/* Carousel Buttons */
+
+.carousel-btn {
+  border: none;
+
+  background: none;
+
+  font-size: 2rem;
+
+  color: var(--brown);
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+  transform: translateX(5px);
+
+  color: #cba37e;
+}
+
+.prev:hover {
+  transform: translateX(-5px);
+}
+
+/* =========================
+   CTA Section
+========================= */
+
+.cta {
+  padding: 7rem 5rem;
+
+  background-color: var(--brown);
+
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 45rem;
+
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: 2.8rem;
+
+  color: var(--cream);
+
+  margin-bottom: 1.5rem;
+}
+
+.cta p {
+  font-size: 1.15rem;
+
+  font-weight: 300;
+
+  color: var(--cream);
+
+  margin-bottom: 2.5rem;
+}
+
+.cta .btn {
+  background-color: var(--soft-brown);
+
+  color: var(--cream);
+}
+
+.cta .btn:hover {
+  background-color: var(--dark-brown);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  background-color: #2d2d2d;
+
+  padding: 4rem 5rem 2rem;
+
+  color: var(--white);
+}
+
+.footer-container {
+  max-width: 70rem;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr;
+
+  gap: 3rem;
+}
+
+/* Brand */
+
+.footer-brand img {
+  width: 24rem;
+
+  height: auto;
+
+  display: block;
+
+  margin-top: -2.1rem;
+
+  margin-bottom: 1.25rem;
+}
+
+.footer-brand p {
+  margin-left: 2.2rem;
+
+  margin-top: -1rem;
+
+  font-weight: 300;
+
+  color: #ddd;
+}
+
+/* Footer Headings */
+
+.footer h3 {
+  font-size: 1.2rem;
+
+  margin-bottom: 1.25rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.3rem;
+}
+
+/* Footer Text */
+
+.footer p,
+.footer a {
+  font-size: 0.95rem;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: #ddd;
+}
+
+.footer a {
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: var(--brown);
+}
+
+.footer ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+/* Footer Bottom */
+
+.footer-bottom {
+  margin-top: 3rem;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+}
+
+/* =========================
+   Enquiry Page
+========================= */
+
+.enquiry-page {
+  background-color: var(--cream);
+
+  padding: 7rem 2rem 6rem;
+}
+
+.enquiry {
+  max-width: 48rem;
+
+  margin: 0 auto;
+}
+
+.enquiry-header {
+  text-align: center;
+
+  margin-bottom: 3.2rem;
+}
+
+.enquiry-header h1 {
+  font-size: 3.2rem;
+
+  color: var(--brown);
+
+  margin-bottom: 1rem;
+}
+
+.enquiry-header p {
+  max-width: 36rem;
+
+  margin: 0 auto 1rem;
+
+  font-size: 1rem;
+
+  color: var(--text);
+
+  line-height: 1.8;
+}
+
+/* =========================
+   Form
+========================= */
+
+.enquiry-form {
+  background-color: var(--white);
+
+  padding: 3rem;
+
+  border-radius: 0.25rem;
+
+  box-shadow: var(--shadow);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+
+  color: var(--dark-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: "Inter", sans-serif;
+
+  font-size: 1rem;
+
+  padding: 0.9rem 1rem;
+
+  border: 1px solid #ddd6cf;
+
+  border-radius: 0.25rem;
+
+  background-color: var(--white);
+
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 10rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: var(--brown);
+
+  box-shadow: 0 0 0 3px rgba(181, 124, 71, 0.15);
+}
+
+/* Submit Button */
+
+.submit-btn {
+  align-self: flex-start;
+
+  padding: 1rem 2.5rem;
+
+  background-color: var(--brown);
+
+  color: var(--cream);
+
+  border: none;
+
+  font-size: 0.9rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--dark-brown);
+
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   Internal Hero Sections
+========================= */
+
+.private-hero {
+  min-height: 80vh;
+
+  background-color: var(--cream);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4rem;
+
+  padding: 6rem 8rem;
+}
+
+.private-image {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.private-image img {
+  width: 80%;
+
+  height: 24rem;
+
+  object-fit: cover;
+
+  box-shadow: var(--shadow);
+}
+
+.private-content {
+  flex: 1;
+
+  max-width: 36rem;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.private-content h1 {
+  font-size: 3rem;
+
+  color: var(--brown);
+
+  margin-bottom: 2rem;
+}
+
+.private-content p {
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  color: var(--text);
+
+  margin-bottom: 1.5rem;
+}
+
+.private-hero .btn {
+  margin-top: 1rem;
+
+  align-self: center;
+}
+
+/* =========================
+   Class Structure
+========================= */
+
+.class-structure {
+  padding: 5rem 2rem 7rem;
+
+  background-color: var(--brown);
+}
+
+.section-heading {
+  text-align: center;
+
+  max-width: 40rem;
+
+  margin: 0 auto 4rem;
+}
+
+.section-heading h2 {
+  font-size: 2.8rem;
+
+  color: var(--cream);
+
+  margin-bottom: 1rem;
+}
+
+.section-heading p {
+  font-size: 1.1rem;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: var(--cream);
+}
+
+.structure-grid {
+  max-width: 80rem;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 4rem;
+}
+
+.structure-card {
+  padding: 3rem;
+
+  background-color: rgba(240, 229, 218, 0.95);
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.structure-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow: 0 15px 35px rgba(80, 55, 35, 0.15);
+}
+
+.structure-card h3 {
+  font-size: 1.6rem;
+
+  color: var(--dark-text);
+
+  margin-bottom: 1.25rem;
+}
+
+.structure-card p {
+  color: var(--text);
+
+  line-height: 1.8;
+}
+
+/* =========================
+   Experience Section
+========================= */
+
+.experience {
+  padding: 5rem 2rem 3rem;
+
+  background-color: var(--cream);
+}
+
+.experience-content {
+  max-width: 70rem;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.experience h2 {
+  font-size: 2.4rem;
+
+  color: var(--dark-text);
+
+  margin-bottom: 2rem;
+}
+
+.experience p {
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  color: var(--text);
+
+  margin-bottom: 1.5rem;
+}
+
+/* =========================
+   Voucher Section
+========================= */
+
+.voucher-section {
+  min-height: 70vh;
+
+  background-color: var(--brown);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4rem;
+
+  padding: 4rem 8rem 0;
+}
+
+.voucher-content {
+  flex: 1;
+}
+
+.voucher-content h2 {
+  font-size: 3rem;
+
+  color: var(--cream);
+
+  margin-bottom: 2rem;
+}
+
+.voucher-content p {
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  color: var(--cream);
+
+  margin-bottom: 1.5rem;
+}
+
+.voucher-content .btn {
+  display: block;
+
+  width: fit-content;
+
+  margin: 3rem auto 0;
+
+  background-color: var(--soft-brown);
+}
+
+.voucher-content .btn:hover {
+  background-color: var(--cream);
+
+  color: var(--soft-brown);
+}
+
+/* Voucher Image */
+
+.voucher-image {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.voucher-image img {
+  width: 100%;
+
+  height: 24rem;
+
+  object-fit: cover;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 4rem;
+}
+
+/* =========================
+   Hen Parties Section
+========================= */
+
+.hen-paragraph-bold {
+  font-weight: 500;
+}
+
+.group-events {
+  min-height: 80vh;
+
+  background-color: var(--brown);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4rem;
+
+  padding: 5rem 8rem;
+}
+
+.group-events-content {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.group-events-content h2 {
+  font-size: 3rem;
+
+  color: var(--cream);
+
+  text-align: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.group-events-intro {
+  color: var(--cream);
+
+  text-align: center;
+
+  line-height: 1.8;
+
+  margin-bottom: 2.5rem;
+}
+
+/* Tick List */
+
+.group-list {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0 auto 2rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1rem 2.5rem;
+}
+
+.group-list li {
+  position: relative;
+
+  padding-left: 1.4rem;
+
+  color: var(--cream);
+}
+
+.group-list li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+
+  color: #e5c7a5;
+
+  font-weight: 700;
+}
+
+.group-events-footer {
+  color: var(--cream);
+
+  text-align: center;
+
+  line-height: 1.8;
+}
+
+/* Image */
+
+.group-events-image {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.group-events-image img {
+  width: 80%;
+
+  height: 24rem;
+
+  object-fit: cover;
+
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 1200px) {
+  /* Navigation */
+  header {
+    height: 0;
+  }
+  .navbar {
+    padding: 0.1rem 2rem;
+  }
+
+  .logo img {
+    width: 16rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .nav-links a,
+  .nav-contact a {
+    font-size: 0.8rem;
+  }
+
+  /* Main split sections */
+  .private-hero,
+  .voucher-section,
+  .group-events {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 2rem;
+  }
+
+  /* Images */
+  .private-image img,
+  .voucher-image img,
+  .group-events-image img {
+    width: 90%;
+  }
+
+  /* Hero headings */
+  .private-content h1,
+  .voucher-content h2,
+  .group-events-content h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Cards */
+  .structure-grid {
+    gap: 2rem;
+  }
+
+  .structure-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* =========================
+     Navigation
+  ========================= */
+
+  header {
+    height: 60px;
+  }
+
+  .navbar {
+    padding: 0.1rem 2rem;
+  }
+
+  .logo img {
+    width: 16rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .nav-links a,
+  .nav-contact a {
+    font-size: 0.75rem;
+  }
+
+  .nav-contact {
+    margin-right: 0;
+  }
+
+  /* =========================
+     Services Carousel
+  ========================= */
+
+  .services {
+    padding: 5rem 3rem;
+  }
+
+  .service-slide {
+    gap: 2.5rem;
+  }
+
+  .service-content h3 {
+    font-size: 1.8rem;
+  }
+
+  /* =========================
+     Private / Corporate Hero
+  ========================= */
+
+  .private-hero {
+    padding: 5rem 4rem;
+    gap: 2rem;
+  }
+
+  .private-content {
+    margin-right: 0;
+  }
+
+  .private-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .private-content p {
+    font-size: 1rem;
+  }
+
+  /* =========================
+   Class Structure Cards
+========================= */
+
+  .class-structure {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .structure-grid {
+    gap: 1rem;
+  }
+
+  .structure-card {
+    padding: 1.5rem;
+  }
+
+  .structure-card h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .structure-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* =========================
+     Voucher Section
+  ========================= */
+
+  .voucher-section {
+    padding: 4rem;
+    gap: 2rem;
+  }
+
+  .voucher-content h2 {
+    font-size: 2.5rem;
+  }
+
+  /* =========================
+     Hen Section
+  ========================= */
+
+  .group-events {
+    padding: 4rem;
+    gap: 2rem;
+  }
+}
+
+/* =========================
+   Tablet Layout
+========================= */
+
+@media (max-width: 900px) {
+  /* =========================
+     Navigation
+  ========================= */
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a,
+  .nav-contact a {
+    font-size: 0.7rem;
+  }
+
+  .logo img {
+    width: 13rem;
+  }
+
+  /* =========================
+     Services Carousel
+  ========================= */
+
+  .service-slide {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .service-image img {
+    height: 22rem;
+  }
+
+  .service-content {
+    align-items: center;
+  }
+
+  .service-content p {
+    max-width: 40rem;
+  }
+
+  /* =========================
+     Private / Corporate Hero
+  ========================= */
+
+  .private-hero {
+    flex-direction: column;
+    padding: 5rem 3rem;
+    text-align: center;
+  }
+
+  .private-image img {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+  .private-content {
+    max-width: 45rem;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .private-content h1 {
+    font-size: 2.4rem;
+  }
+
+  /* =========================
+     Class Structure Cards
+  ========================= */
+
+  .structure-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .structure-card {
+    padding: 1.25rem;
+  }
+
+  .structure-card h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .structure-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* =========================
+     Voucher Section
+  ========================= */
+
+  .voucher-section {
+    flex-direction: column;
+    padding: 4rem 3rem;
+    text-align: center;
+  }
+
+  .voucher-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .voucher-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .voucher-image img {
+    width: 100%;
+    max-width: 35rem;
+    margin-bottom: 0;
+  }
+
+  /* =========================
+     Hen Section
+  ========================= */
+
+  .group-events {
+    flex-direction: column;
+    padding: 4rem 3rem;
+    text-align: center;
+  }
+
+  .group-list {
+    max-width: 30rem;
+  }
+
+  .group-events-image img {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+  /* =========================
+     Experience
+  ========================= */
+
+  .experience-content {
+    padding: 0 1rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer {
+    padding: 3rem 2rem 2rem;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 820px) {
+  /* =========================
+     Navigation
+  ========================= */
+
+  .navbar {
+    padding: 0.5rem 1.2rem;
+  }
+
+  .logo img {
+    width: 13rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-links a,
+  .nav-contact a {
+    font-size: 0.6rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-contact {
+    margin-right: 0;
+  }
+
+  /* =========================
+     Class Structure Cards
+  ========================= */
+
+  .structure-grid {
+    gap: 1rem;
+  }
+
+  .structure-card {
+    padding: 1.25rem;
+  }
+
+  .structure-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .structure-card p {
+    font-size: 0.85rem;
+  }
+
+  /* =========================
+     Footer
+  ========================= */
+
+  .footer-container {
+    gap: 1rem;
+  }
+
+  .footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .footer-brand img {
+    width: 16rem;
+  }
+}
+
+@media (max-width: 770px) {
+  /* =========================
+     Navigation
+  ========================= */
+
+  .navbar {
+    padding: 0.1rem 1.5rem;
+  }
+
+  .logo img {
+    width: 13rem;
+  }
+
+  .nav-centre {
+    justify-content: center;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-links a,
+  .nav-contact a {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-contact {
+    margin-right: 0;
+  }
+
+  /* =========================
+     Private / Corporate Hero
+  ========================= */
+
+  .private-hero {
+    padding: 4rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .private-image img {
+    width: 90%;
+    height: 20rem;
+  }
+
+  .private-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .private-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     Class Structure Cards
+  ========================= */
+
+  .class-structure {
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .structure-grid {
+    gap: 1.25rem;
+  }
+
+  .structure-card {
+    padding: 1.5rem;
+  }
+
+  .structure-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .structure-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  /* =========================
+     Images
+  ========================= */
+
+  .group-events-image img,
+  .voucher-image img {
+    width: 90%;
+    height: 20rem;
+  }
+
+  /* =========================
+     Footer
+  ========================= */
+
+  .footer {
+    padding: 3rem 2rem 2rem;
+  }
+
+  .footer-container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 680px) {
+  /* =========================
+     Navigation
+  ========================= */
+
+  header {
+    height: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    width: 11rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links a,
+  .nav-contact a {
+    font-size: 0.55rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* =========================
+     Hero Sections
+  ========================= */
+
+  .private-hero {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .private-image {
+    width: 100%;
+  }
+
+  .private-image img {
+    width: 100%;
+    height: 18rem;
+  }
+
+  .private-content {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .private-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .private-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     Services Carousel
+  ========================= */
+
+  .services {
+    padding: 4rem 1.5rem;
+  }
+
+  .service-slide {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .service-image img {
+    height: 18rem;
+  }
+
+  .service-content {
+    align-items: center;
+  }
+
+  .service-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+  }
+
+  /* =========================
+     Class Structure Cards
+  ========================= */
+
+  .structure-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .structure-card {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .structure-card h3 {
+    font-size: 1.4rem;
+  }
+
+  /* =========================
+     Voucher Section
+  ========================= */
+
+  .voucher-section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .voucher-content {
+    order: 1;
+  }
+
+  .voucher-image {
+    order: 2;
+    width: 100%;
+  }
+
+  .voucher-image img {
+    width: 100%;
+    height: 18rem;
+    margin-bottom: 0;
+  }
+
+  .voucher-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .voucher-content p {
+    font-size: 1rem;
+  }
+
+  .voucher-content .btn {
+    margin: 2rem auto 0;
+  }
+
+  /* =========================
+     Hen Section
+  ========================= */
+
+  .group-events {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .group-events-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .group-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .group-events-image img {
+    width: 100%;
+    height: 18rem;
+  }
+
+  /* =========================
+     Experience Section
+  ========================= */
+
+  .experience {
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  /* =========================
+     Footer
+  ========================= */
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand img {
+    width: 18rem;
+    margin: 0 auto 1rem;
+  }
+
+  .footer-brand p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  /* =========================
+     Navigation
+  ========================= */
+
+  header {
+    height: 60px;
+  }
+
+  .navbar {
+    padding: 0.1rem 1rem;
+    height: 60px;
+  }
+
+  .logo img {
+    width: 10rem;
+  }
+
+  .nav-centre {
+    flex: unset;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links a,
+  .nav-contact a {
+    font-size: 0.55rem;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-contact {
+    margin-right: 0;
+  }
+
+  /* =========================
+     Hero
+  ========================= */
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* =========================
+     Private / Corporate Hero
+  ========================= */
+
+  .private-hero {
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .private-image img {
+    width: 100%;
+    height: 18rem;
+  }
+
+  .private-content {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .private-content h1 {
+    font-size: 2rem;
+  }
+
+  /* =========================
+     Structure Cards
+  ========================= */
+
+  .structure-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .structure-card {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  /* =========================
+     Voucher
+  ========================= */
+
+  .voucher-section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .voucher-image img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .voucher-content {
+    text-align: center;
+  }
+
+  .voucher-content h2 {
+    font-size: 2rem;
+  }
+
+  .voucher-content .btn {
+    margin: 2rem auto 0;
+  }
+
+  /* =========================
+     Hen Events
+  ========================= */
+
+  .group-events {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .group-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* =========================
+     Footer
+  ========================= */
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand img {
+    margin: 0 auto 1rem;
+    width: 16rem;
+  }
+
+  .footer-brand p {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  /* =========================
+     Mobile Navigation
+  ========================= */
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide desktop navigation */
+  .nav-centre,
+  .nav-contact {
+    display: none;
+  }
+
+  /* Show hamburger menu */
+  .navbar.menu-open .nav-centre {
+    display: block;
+
+    position: absolute;
+
+    top: 60px;
+
+    left: 0;
+
+    width: 100%;
+
+    background-color: #faf7f3;
+
+    padding: 2rem 0;
+  }
+
+  /* Menu links */
+
+  .navbar.menu-open .nav-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    width: 100%;
+  }
+
+  /* Contact inside hamburger */
+
+  .mobile-contact {
+    display: block;
+  }
+
+  /* Slightly smaller mobile text */
+
+  .nav-links a {
+    font-size: 0.8rem;
+
+    letter-spacing: 0.1em;
+  }
+}
+
+/* Hamburger Animation */
+
+.hamburger span {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lumen Pilates | Enquiry</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         Navigation
+    ========================== -->
+
+    <header>
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/lumen-horizontal.png" alt="Lumen Pilates Logo" />
+          </a>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <button
+          class="hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-centre">
+          <ul class="nav-links">
+            <li>
+              <a href="private.html"> PRIVATE </a>
+            </li>
+
+            <li>
+              <a href="corporate.html"> CORPORATE </a>
+            </li>
+
+            <li>
+              <a href="prenatal.html"> PRE &amp; POST NATAL </a>
+            </li>
+
+            <li>
+              <a href="hen-parties.html"> HEN PARTIES &amp; CELEBRATIONS </a>
+            </li>
+
+            <li class="mobile-contact">
+              <a href="mailto:info@lumenpilates.ie?subject=Pilates%20Enquiry">
+                CONTACT US
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="enquiry-page">
+      <div class="nav-trigger"></div>
+
+      <!-- =========================
+           Enquiry
+      ========================== -->
+
+      <section class="enquiry">
+        <div class="enquiry-header">
+          <h1>Book an Enquiry</h1>
+
+          <p>
+            Whether you're interested in private Pilates, corporate sessions,
+            pre &amp; post-natal Pilates or a celebration event, we'd love to
+            hear from you.
+          </p>
+
+          <p>
+            Complete the form below and we’ll aim to respond within 24 hours.
+          </p>
+        </div>
+
+        <form
+          class="enquiry-form"
+          name="enquiry"
+          method="POST"
+          data-netlify="true"
+          action="/success.html"
+        >
+          <!-- Required for Netlify -->
+
+          <input type="hidden" name="form-name" value="enquiry" />
+
+          <div class="form-group">
+            <label for="name"> Full Name * </label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email"> Email Address * </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone"> Phone Number </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+353..."
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="service"> Service Interested In * </label>
+
+            <select id="service" name="service" required>
+              <option value="">Please select</option>
+
+              <option>Private Pilates</option>
+
+              <option>Corporate Pilates</option>
+
+              <option>Pre &amp; Post Natal Pilates</option>
+
+              <option>Hen Parties &amp; Celebrations</option>
+
+              <option>Gift Voucher</option>
+
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message"> How can we help? * </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell us a little about your goals or ask us a question..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">SEND ENQUIRY</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="images/lumen-logo-white.png" alt="Lumen Pilates Logo" />
+
+          <p>Movement for Life, Work &amp; Celebration</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact</h3>
+
+          <p>
+            <a href="mailto:info@lumenpilates.ie"> info@lumenpilates.ie </a>
+          </p>
+
+          <p>
+            <a href="tel:+353852864343"> +353 85 286 4343 </a>
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Services</h3>
+
+          <ul>
+            <li>
+              <a href="private.html"> Private Pilates </a>
+            </li>
+
+            <li>
+              <a href="corporate.html"> Corporate Pilates </a>
+            </li>
+
+            <li>
+              <a href="prenatal.html"> Pre &amp; Post Natal </a>
+            </li>
+
+            <li>
+              <a href="hen-parties.html"> Hen Parties &amp; Celebrations </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lumen Pilates. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
