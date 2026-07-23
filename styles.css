@@ -2057,6 +2057,22 @@ p {
 
     letter-spacing: 0.1em;
   }
+
+  /* =========================
+   Success Page Mobile
+========================= */
+
+  .success-page {
+    padding: 5rem 1.5rem;
+  }
+
+  .success-page h1 {
+    font-size: 2rem;
+  }
+
+  .success-page p {
+    font-size: 1rem;
+  }
 }
 
 /* Hamburger Animation */
@@ -2075,4 +2091,69 @@ p {
 
 .hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================
+   Success Page
+========================= */
+
+.success-page {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 6rem 2rem;
+
+  background-color: #faf7f3;
+}
+
+.success-page h1 {
+  font-family: "Libre Baskerville", serif;
+
+  font-size: 3rem;
+
+  font-weight: 400;
+
+  color: #3f3a35;
+
+  margin-bottom: 1.5rem;
+}
+
+.success-page p {
+  max-width: 550px;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  color: #5b554f;
+
+  margin-bottom: 2.5rem;
+}
+
+.success-page a {
+  display: inline-block;
+
+  padding: 0.9rem 2.2rem;
+
+  background-color: #3f3a35;
+
+  color: #faf7f3;
+
+  text-decoration: none;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.08em;
+
+  transition: all 0.3s ease;
+}
+
+.success-page a:hover {
+  background-color: #6d655d;
 }
